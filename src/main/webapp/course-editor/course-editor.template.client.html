@@ -6,102 +6,122 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="../styles/styles.css"
+  <link href="../css/css.style.css"
         rel="stylesheet"/>
   <link href="course-editor.style.client.css"
         rel="stylesheet"/>
   <title>Course Editor</title>
 </head>
+
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">X</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="course-name">CS5610 - WebDev</div>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Build</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pages</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Theme</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Store</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Apps</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Settings</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <a href="../course-list/course-list.template.client.html">
+    <i class="fa fa-times wbdv-course-editor wbdv-close"></i></a>
+  <div class="wbdv-course-title">CS5610 - WebDev</div>
+  <ul class="navbar-nav flex-row wbdv-lesson-tabs d-none d-sm-flex">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Build</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pages</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Theme</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Store</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Apps</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Settings</a>
+    </li>
+  </ul>
+  <div class="col">
+    <i class="fa fa-plus pull-right fa-2x wbdv-lesson-add-btn" aria-hidden="true"></i>
   </div>
 </nav>
 
 <div class="container-fluid">
-  <div class="row fill">
-    <div class="col-3">
-      <div class="list-group">
-        <a href="#"
-           class="list-group-item">Module 1-jQuery</a>
-        <a href="#"
-           class="list-group-item active">Module 2-React</a>
-        <a href="#"
-           class="list-group-item">Module 3-Redux</a>
-        <a href="#"
-           class="list-group-item">Module 4-Native</a>
-        <a href="#"
-           class="list-group-item">Module 5-Angular</a>
-        <a href="#"
-           class="list-group-item">Module 6-Node</a>
-        <a href="#"
-           class="list-group-item">Module 7-Mongo</a>
-      </div>
+  <div class="row fillscreen">
+    <div class="col-3 d-none d-sm-block">
+      <ul class="list-group wbdv-module-list">
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 1-jQuery</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 2-React</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 3-Redux</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 4-Native</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 5-Angular</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 6-Node</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-module-item">
+          <a href="#" class="wbdv-module-item-title">Module 7-Mongo</a>
+          <i class="fa fa-times pull-right wbdv-module-item-delete-btn"></i></li>
+      </ul>
+      <i class="fa fa-plus fa-2x wbdv-module-item-add-btn pull-right" aria-hidden="true"></i>
     </div>
-    <div class="col-9 right-side">
-      <div class="row-topic">
-        <ul class="nav nav-pills">
+    <div class="col-sm-9 right-field">
+      <div class="wbdv-row-topic row">
+        <ul class="nav nav-pills wbdv-topic-pill-list">
           <li class="nav-item">
-            <a class="nav-link nav-topic" href="#">Topic 1</a>
+            <a class="nav-link wbdv-topic-pill" href="#">Topic 1</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-topic active" href="#">Topic 2</a>
+            <a class="nav-link wbdv-topic-pill active" href="#">Topic 2</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-topic" href="#">Topic 3</a>
+            <a class="nav-link wbdv-topic-pill" href="#">Topic 3</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-topic" href="#">Topic 4</a>
+            <a class="nav-link wbdv-topic-pill" href="#">Topic 4</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-topic" href="#">Topic 5</a>
+            <a class="nav-link wbdv-topic-pill" href="#">Topic 5</a>
           </li>
         </ul>
+        <button type="button" class="btn btn-primary btn-sm wbdv-topic-add-btn">
+          <i class="fa fa-plus" aria-hidden="true"></i></button>
       </div>
 
-      <div>
-        button1+review+button
+      <div class="row preview-save">
+        <div class="col text-right">
+          <button type="button" class="btn btn-success btn-sm">save</button>
+          Preview
+          <i class="fa fa-toggle-off wiget-toggle" aria-hidden="true"></i>
+        </div>
       </div>
 
-      <div class="content-box">
+      <div class="content-box heading-widget wbdv-widget">
         <div class="row">
-          <h3>Heading widget</h3>
-          <div class="col test-right">
-            <button type="button" class="btn btn-warning">Warning</button>
-            <button type="button" class="btn btn-warning">Warning</button>
-            <select class="form">
-              <option value="a">a</option>
-              <option value="b">b</option>
-              <option value="c">c</option>
+          <div class="col">
+            <h3>Heading widget</h3>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+            <select class="form heading-widget-dropdown widget-dropdown">
+              <option value="heading">heading</option>
+              <option value="paragraph">paragraph</option>
+              <option value="list">list</option>
+              <option value="image">image</option>
             </select>
-            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-danger btn-sm">
+              <i class="fa fa-times wbdv-module-item-delete-btn"></i>
+            </button>
           </div>
         </div>
 
@@ -112,17 +132,16 @@
         </div>
 
         <div class="form-group row">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option value="Faculty">Heading 1</option>
-              <option value="Student">Heading 2</option>
-              <option value="Admin">Heading 3</option>
-            </select>
+          <select class="form-control">
+            <option value="heading1">heading1</option>
+            <option value="heading2">heading2</option>
+            <option value="heading3">heading3</option>
+          </select>
         </div>
 
         <div class="row form-group">
-          <input class="form-control"
-                 id="wiget-name"
-                 value="Widget name"/>
+          <label for="wiget-name" class="d-none"></label>
+          <input class="form-control" id="wiget-name" value="Widget name"/>
         </div>
         <div>
           <h3>
@@ -133,6 +152,129 @@
           </h1>
         </div>
       </div>
+
+      <div class="content-box paragraph-widget wbdv-widget">
+        <div class="row">
+          <div class="col">
+            <h3>Paragraph widget</h3>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+            <select class="form paragraph-widget-dropdown widget-dropdown">
+              <option value="paragraph">paragraph</option>
+              <option value="heading">heading</option>
+              <option value="list">list</option>
+              <option value="image">image</option>
+            </select>
+            <button type="button" class="btn btn-danger btn-sm">
+              <i class="fa fa-times wbdv-module-item-delete-btn"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <!--          <input type="text" class="form-control"-->
+          <!--                 id="heading-text2"/>-->
+          <!--          https://stackoverflow.com/questions/2803880/is-there-a-way-to-get-a-textarea-to-stretch-to-fit-its-content-without-using-php-->
+          <textarea class="form-control" name="text" oninput='this.style.height = "";
+          this.style.height = this.scrollHeight + "px"'
+                    placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"></textarea>
+        </div>
+
+        <div class="row form-group">
+          <input class="form-control"
+                 value="Widget name"/>
+        </div>
+        <div>
+          <h3>
+            Preview
+          </h3>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+        </div>
+      </div>
+
+      <div class="content-box list-widget wbdv-widget">
+        <div class="row">
+          <div class="col">
+            <h3>List widget</h3>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+            <select class="form list-widget-dropdown widget-dropdown">
+              <option value="list">list</option>
+              <option value="image">image</option>
+              <option value="paragraph">paragraph</option>
+              <option value="heading">heading</option>
+            </select>
+            <button type="button" class="btn btn-danger btn-sm">
+              <i class="fa fa-times wbdv-module-item-delete-btn"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <input class="form-control list-widget-input" placeholder="..."/>
+        </div>
+
+        <div class="row form-group">
+          <input class="form-control"
+                 value="Widget name"/>
+        </div>
+        <div>
+          <h3>
+            Preview
+          </h3>
+        </div>
+      </div>
+
+      <div class="content-box image-widget wbdv-widget">
+        <div class="row">
+          <div class="col">
+            <h3>Image widget</h3>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+            <select class="form image-widget-dropdown widget-dropdown">
+              <option value="image">image</option>
+              <option value="paragraph">paragraph</option>
+              <option value="heading">heading</option>
+              <option value="list">list</option>
+            </select>
+            <button type="button" class="btn btn-danger btn-sm">
+              <i class="fa fa-times wbdv-module-item-delete-btn"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <input type="url" class="form-control" placeholder="URL"/>
+        </div>
+
+        <div class="row form-group">
+          <input class="form-control"
+                 value="Widget name"/>
+        </div>
+        <div>
+          <h3>
+            Preview
+          </h3>
+          <img class="image-preview-widget" src="../pictures/editor_test1.png">
+        </div>
+      </div>
+
+      <i class="fa fa-plus fa-2x wbdv-widget-item-add-btn pull-right" aria-hidden="true"></i>
 
     </div>
   </div>

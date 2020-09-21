@@ -1,0 +1,21 @@
+.wbdv-index-content{
+  margin-top: 100px;
+}
+
+.wbdv-index-btn-login{
+  background-color: #e32727;
+  border-color: #e32727;
+  width: 200px;
+  color: white;
+}
+
+.wbdv-index-btn-login:hover{
+  background-color: #e32727;
+  border-color: #1f1e1e;
+}
+
+
+.wbdv-index-btn{
+  margin-top: 50px;
+  align-items: center;
+}

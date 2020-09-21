@@ -1,44 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Course Manager</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        rel="stylesheet"/>
-  <link href="../styles/styles.css"
         rel="stylesheet"/>
   <link href="course-list.style.client.css"
         rel="stylesheet"/>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <i class="fa fa-bars wbdv-field wbdv-hamburger col-0" aria-hidden="true"></i>
+  <div class="wbdv-label wbdv-course-manager d-none d-sm-block">
+    Course Manager
+  </div>
+  <label for="newCourseFld"></label>
+  <input class="form-control wbdv-field wbdv-new-course col-8" type="text"
+             placeholder="New Course Title" id="newCourseFld"/>
+  <i class="fa fa-plus pull-right fa-2x wbdv-button wbdv-add-course
+    wbdv-sticky-add-course" aria-hidden="true"></i>
+  <i class="fa fa-plus-circle pull-right fa-2x wbdv-button wbdv-add-course" aria-hidden="true"></i>
+</nav>
+
 <div class="container">
-  <h1>Course Manager</h1>
-  <div class="row">
-    <div class="col-6">
-      <a href="course-editor.template.client.html">
-        CS5500 Software Engineering
-      </a>
-    </div>
-    <div class="col-2">me</div>
-    <div class="col-2">6:55pm Today</div>
-    <div class="col-2">X</div>
-  </div>
-  <div class="row">
-    <div class="col-6">CS5500 Software Engineering</div>
-    <div class="col-2">me</div>
-    <div class="col-2">6:55pm Today</div>
-    <div class="col-2">X</div>
-  </div>
-  <div class="row">
-    <div class="col-6">CS5500 Software Engineering</div>
-    <div class="col-2">me</div>
-    <div class="col-2">6:55pm Today</div>
-    <div class="col-2">X</div>
-  </div>
-  <div class="row">
-    <div class="col-6">CS5500 Software Engineering</div>
-    <div class="col-2">me</div>
-    <div class="col-2">6:55pm Today</div>
-    <div class="col-2">X</div>
-  </div>
+  <table class="table">
+    <thead>
+    <tr class="d-none d-sm-table-row">
+      <th class="wbdv-header wbdv-title">Title</th>
+      <th class="wbdv-header wbdv-owner">Owner</th>
+      <th class="wbdv-header wbdv-date">Date</th>
+      <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+      <th class="wbdv-header">
+        <i class="fa fa-th wbdv-button wbdv-grid-layout" aria-hidden="true"></i>
+        <i class="fa fa-th-list wbdv-button wbdv-list-layout" aria-hidden="true"></i>
+        <i class="fa fa-sort-alpha-asc wbdv-header wbdv-sort" aria-hidden="true"></i>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+      <td>
+        <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+        <a class="wbdv-row wbdv-title" href="../course-editor/course-editor.template.client.html">
+          CS5610 Web Development
+        </a>
+      </td>
+      <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+      <td class="wbdv-row wbdv-date d-none d-sm-table-cell">9/20/2020</td>
+      <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">5:34 pm</td>
+      <td>
+        <i class="fa fa-trash pull-right wbdv-row wbdv-button wbdv-delete" aria-hidden="true"></i>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
 </div>
 </body>
 </html>
