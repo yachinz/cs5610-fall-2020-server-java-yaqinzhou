@@ -113,12 +113,14 @@
             <button type="button" class="btn btn-warning btn-sm">
               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </button>
-            <select class="form heading-widget-dropdown widget-dropdown">
-              <option value="heading">heading</option>
-              <option value="paragraph">paragraph</option>
-              <option value="list">list</option>
-              <option value="image">image</option>
-            </select>
+            <label>
+              <select class="form heading-widget-dropdown widget-dropdown">
+                <option value="heading">heading</option>
+                <option value="paragraph">paragraph</option>
+                <option value="list">list</option>
+                <option value="image">image</option>
+              </select>
+            </label>
             <button type="button" class="btn btn-danger btn-sm">
               <i class="fa fa-times wbdv-module-item-delete-btn"></i>
             </button>
@@ -126,13 +128,15 @@
         </div>
 
         <div class="row form-group">
+          <label for="wiget-heading-text" class="d-none"></label>
           <input class="form-control"
-                 id="heading-text"
-                 value="Heading text"/>
+                 value="Heading text" id="wiget-heading-text"/>
         </div>
 
-        <div class="form-group row">
-          <select class="form-control">
+
+        <div class="row form-group">
+          <label for="widget-heading-select" class="d-none"></label>
+          <select class="form-control" id="widget-heading-select">
             <option value="heading1">heading1</option>
             <option value="heading2">heading2</option>
             <option value="heading3">heading3</option>
@@ -153,7 +157,7 @@
         </div>
       </div>
 
-      <div class="content-box paragraph-widget wbdv-widget">
+      <div class="content-box paragraph-widget wbdv-widget d-none">
         <div class="row">
           <div class="col">
             <h3>Paragraph widget</h3>
@@ -164,12 +168,14 @@
             <button type="button" class="btn btn-warning btn-sm">
               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </button>
-            <select class="form paragraph-widget-dropdown widget-dropdown">
-              <option value="paragraph">paragraph</option>
-              <option value="heading">heading</option>
-              <option value="list">list</option>
-              <option value="image">image</option>
-            </select>
+            <label>
+              <select class="form paragraph-widget-dropdown widget-dropdown">
+                <option value="paragraph">paragraph</option>
+                <option value="heading">heading</option>
+                <option value="list">list</option>
+                <option value="image">image</option>
+              </select>
+            </label>
             <button type="button" class="btn btn-danger btn-sm">
               <i class="fa fa-times wbdv-module-item-delete-btn"></i>
             </button>
@@ -177,27 +183,42 @@
         </div>
 
         <div class="row form-group">
-          <!--          <input type="text" class="form-control"-->
-          <!--                 id="heading-text2"/>-->
-          <!--          https://stackoverflow.com/questions/2803880/is-there-a-way-to-get-a-textarea-to-stretch-to-fit-its-content-without-using-php-->
-          <textarea class="form-control" name="text" oninput='this.style.height = "";
-          this.style.height = this.scrollHeight + "px"'
+          <!--https://stackoverflow.com/questions/2803880/is-there-a-way-to-get-a-textarea-to-stretch-to-fit-its-content-without-using-php-->
+          <label for="widget-para-text" class="d-none"></label>
+          <textarea class="form-control" name="text" id="widget-para-text" oninput='this.style.height = "";
+             this.style.height = this.scrollHeight + "px"'
                     placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"></textarea>
         </div>
 
         <div class="row form-group">
-          <input class="form-control"
+          <label for="para-widget-name" class="d-none"></label>
+          <input class="form-control" id="para-widget-name"
                  value="Widget name"/>
         </div>
         <div>
           <h3>
             Preview
           </h3>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+          dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+          sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+          vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+          Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+          elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+          consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+          a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
+          imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+          dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+          libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+          pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+          sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+          faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
+          magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
         </div>
       </div>
 
-      <div class="content-box list-widget wbdv-widget">
+      <div class="content-box list-widget wbdv-widget d-none">
         <div class="row">
           <div class="col">
             <h3>List widget</h3>
@@ -208,12 +229,14 @@
             <button type="button" class="btn btn-warning btn-sm">
               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </button>
-            <select class="form list-widget-dropdown widget-dropdown">
-              <option value="list">list</option>
-              <option value="image">image</option>
-              <option value="paragraph">paragraph</option>
-              <option value="heading">heading</option>
-            </select>
+            <label>
+              <select class="form list-widget-dropdown widget-dropdown">
+                <option value="list">list</option>
+                <option value="image">image</option>
+                <option value="paragraph">paragraph</option>
+                <option value="heading">heading</option>
+              </select>
+            </label>
             <button type="button" class="btn btn-danger btn-sm">
               <i class="fa fa-times wbdv-module-item-delete-btn"></i>
             </button>
@@ -221,11 +244,14 @@
         </div>
 
         <div class="row form-group">
-          <input class="form-control list-widget-input" placeholder="..."/>
+          <label for="list-widget-input-fld" class="d-none"></label>
+          <input class="form-control list-widget-input" id="list-widget-input-fld"
+                 placeholder="..."/>
         </div>
 
         <div class="row form-group">
-          <input class="form-control"
+          <label for="list-widget-name" class="d-none"></label>
+          <input class="form-control" id="list-widget-name"
                  value="Widget name"/>
         </div>
         <div>
@@ -235,7 +261,7 @@
         </div>
       </div>
 
-      <div class="content-box image-widget wbdv-widget">
+      <div class="content-box image-widget wbdv-widget d-none">
         <div class="row">
           <div class="col">
             <h3>Image widget</h3>
@@ -246,12 +272,14 @@
             <button type="button" class="btn btn-warning btn-sm">
               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </button>
-            <select class="form image-widget-dropdown widget-dropdown">
-              <option value="image">image</option>
-              <option value="paragraph">paragraph</option>
-              <option value="heading">heading</option>
-              <option value="list">list</option>
-            </select>
+            <label>
+              <select class="form image-widget-dropdown widget-dropdown">
+                <option value="image">image</option>
+                <option value="paragraph">paragraph</option>
+                <option value="heading">heading</option>
+                <option value="list">list</option>
+              </select>
+            </label>
             <button type="button" class="btn btn-danger btn-sm">
               <i class="fa fa-times wbdv-module-item-delete-btn"></i>
             </button>
@@ -259,18 +287,20 @@
         </div>
 
         <div class="row form-group">
-          <input type="url" class="form-control" placeholder="URL"/>
+          <label for="img-widget-url" class="d-none"></label>
+          <input type="url" class="form-control" id="img-widget-url" placeholder="URL"/>
         </div>
 
         <div class="row form-group">
-          <input class="form-control"
+          <label for="img-widget-name" class="d-none"></label>
+          <input class="form-control" id="img-widget-name"
                  value="Widget name"/>
         </div>
         <div>
           <h3>
             Preview
           </h3>
-          <img class="image-preview-widget" src="../pictures/editor_test1.png">
+          <img class="image-preview-widget" src="../pictures/editor_test1.png" alt="test">
         </div>
       </div>
 
