@@ -78,7 +78,7 @@
       })
   }
 
-  const updateSelectedUser = () => {
+  const updateUser = () => {
     const newUsername = $("#usernameFld").val()
     const newFirstName = $("#firstNameFld").val()
     const newLastName = $("#lastNameFld").val()
@@ -108,6 +108,15 @@
       })
   }
 
+  const findAllUsers = () => {
+    userService.findAllUsers()
+    .then((_users) => {
+      users = _users
+      renderUsers(users)
+    })
+  }
+
+
   const main = () => {
 
 
@@ -124,13 +133,14 @@
     $lastNameFld = $("#lastNameFld")
     $roleFld = $("#roleFld")
     $passwordFld = $("#passwordFld")
-    $(".wbdv-update").click(updateSelectedUser)
+    $(".wbdv-update").click(updateUser)
 
-    userService.findAllUsers()
-      .then((_users) => {
-        users = _users
-        renderUsers(users)
-      })
+    findAllUsers()
+    // userService.findAllUsers()
+    //   .then((_users) => {
+    //     users = _users
+    //     renderUsers(users)
+    //   })
 
   }
   $(main)

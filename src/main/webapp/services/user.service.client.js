@@ -5,7 +5,6 @@ function AdminUserServiceClient() {
   this.deleteUser = deleteUser;
   this.updateUser = updateUser;
   this.url = 'https://wbdv-generic-server.herokuapp.com/api/yaqinzhou/users';
-  // var self = this;
   function findAllUsers() {
     return fetch(this.url)
       .then(response => response.json())
