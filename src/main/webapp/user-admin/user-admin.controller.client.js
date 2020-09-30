@@ -136,12 +136,6 @@
     $(".wbdv-update").click(updateUser)
 
     findAllUsers()
-    // userService.findAllUsers()
-    //   .then((_users) => {
-    //     users = _users
-    //     renderUsers(users)
-    //   })
-
   }
   $(main)
 
