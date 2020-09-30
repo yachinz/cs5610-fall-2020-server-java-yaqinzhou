@@ -9,7 +9,20 @@
   color: white;
 }
 
+.wbdv-index-btn-admin{
+  background-color: #e32727;
+  border-color: #e32727;
+  width: 200px;
+  color: white;
+}
+
+
 .wbdv-index-btn-login:hover{
+  background-color: #e32727;
+  border-color: #1f1e1e;
+}
+
+.wbdv-index-btn-admin:hover{
   background-color: #e32727;
   border-color: #1f1e1e;
 }

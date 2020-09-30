@@ -52,7 +52,6 @@
   }
 
   const createUser = () => {
-    console.log("create user")
     const username = $usernameFld.val()
     const firstName = $firstNameFld.val()
     const lastName = $lastNameFld.val()
@@ -109,7 +108,7 @@
       })
   }
 
-  const init = () => {
+  const main = () => {
 
 
     const heading1 = jQuery("h1")
@@ -134,7 +133,7 @@
       })
 
   }
-  $(init)
+  $(main)
 
 
 })()
