@@ -23,7 +23,7 @@ function AdminUserServiceClient() {
       .then(response => response.json())
   }
   function updateUser(userId, user) {
-    return fetch(this.url + userId, {
+    return fetch(this.url + '/' + userId, {
       method: 'PUT',
       body: JSON.stringify(user),
       headers: {
@@ -32,7 +32,7 @@ function AdminUserServiceClient() {
     })
   }
   function deleteUser(userId) {
-    return fetch(this.url + userId, {
+    return fetch(this.url+ '/' + userId, {
       method: 'DELETE'
     })
   }

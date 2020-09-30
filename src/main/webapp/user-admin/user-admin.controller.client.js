@@ -134,7 +134,6 @@
     $roleFld = $("#roleFld")
     $passwordFld = $("#passwordFld")
     $(".wbdv-update").click(updateUser)
-
     findAllUsers()
   }
   $(main)
