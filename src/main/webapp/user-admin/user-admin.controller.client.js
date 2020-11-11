@@ -119,7 +119,10 @@
 
   const main = () => {
 
-
+    const customer = {name: "Foo"};
+    const card = {amount: 10, product: "Bar", unitprice: 100};
+    const message = `${card.amount * card.unitprice} bucks?`;
+    console.log(message);
     const heading1 = jQuery("h1")
     heading1
       .html("User Administrator")
