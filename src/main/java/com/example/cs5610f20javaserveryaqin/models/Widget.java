@@ -1,20 +1,28 @@
 package com.example.cs5610f20javaserveryaqin.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "widgets")
 public class Widget {
   private String name;
-  private String id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
   private String type;
   private Integer widgetOrder;
   private String text;
-  //private String src;
+  private String src;
   private String size;
-  private final String topicId;
-//  private Integer width;
-//  private Integer height;
+  private String topicId;
+  private String listOrder;
 
-
-  public Widget(String name, String id, String type, Integer widgetOrder, String text,
-      String size, String topicId) {
+  public Widget(String name, Integer id, String type, Integer widgetOrder, String text,
+      String size, String topicId, String src, String listOrder) {
     this.name = name;
     this.id =id;
     this.type = type;
@@ -22,13 +30,24 @@ public class Widget {
     this.text = text;
     this.size = size;
     this.topicId = topicId;
+    this.src= src;
+    this.listOrder = listOrder;
   }
+
+  public Widget() {
+  }
+
+  public String getListOrder() {
+    return this.listOrder;
+  }
+
+  public String getSrc() {return this.src;}
 
   public String getName() {
     return this.name;
   }
 
-  public String getId() {
+  public Integer getId() {
     return this.id;
   }
 
@@ -52,7 +71,11 @@ public class Widget {
     return this.size;
   }
 
-  public void setId(String id) {
+  public void setSrc(String src) {
+    this.src = src;
+  }
+
+  public void setId(Integer id) {
     this.id = id;
   }
 
@@ -75,5 +98,7 @@ public class Widget {
   public void setSize(String size) {
     this.size = size;
   }
+
+  public void setListOrder(String listOrder) {this.listOrder = listOrder;}
 
 }
